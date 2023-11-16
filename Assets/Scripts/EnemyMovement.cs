@@ -1,19 +1,22 @@
+using System.Collections;
+using System.Collections.Generic;
+using System;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
-public class MovementController : MonoBehaviour
+public class EnemyMovement : MonoBehaviour
 {   
+
     public int HP = 10;
     private new Rigidbody2D rigidbody;
     private Vector2 direction = Vector2.down;
+    private Vector2[] directions = {Vector2.up, Vector2.down, Vector2.left, Vector2.right};
+    private System.Random rnd = new System.Random();
+    private int v1 = 3;
+    private int v2 = 3;
+    private float nextActionTime = 0.0f;
+    public float period = 1.0f;
     public float speed = 5f;
     public bool isWalking = false;
-
-    [Header("Input")]
-    public KeyCode inputUp = KeyCode.W;
-    public KeyCode inputDown = KeyCode.S;
-    public KeyCode inputLeft = KeyCode.A;
-    public KeyCode inputRight = KeyCode.D;
 
     [Header("Sprites")]
     public AnimatedSpriteRenderer spriteRendererUp;
@@ -30,38 +33,21 @@ public class MovementController : MonoBehaviour
         isWalking = false;
     }
 
-    private void Update()
-    {   
-        if (Input.GetKey(inputUp) && Input.GetKey(inputLeft)) {
-            isWalking = true;
-            SetDirection(Vector2.up + Vector2.left, spriteRendererUp);
-        } else if (Input.GetKey(inputUp) && Input.GetKey(inputRight)) {
-            isWalking = true;
-            SetDirection(Vector2.up + Vector2.right, spriteRendererUp);
-        } else if (Input.GetKey(inputDown) && Input.GetKey(inputRight)) {
-            isWalking = true;
-            SetDirection(Vector2.down + Vector2.right, spriteRendererDown);
-        } else if (Input.GetKey(inputDown) && Input.GetKey(inputLeft)) {
-            isWalking = true;
-            SetDirection(Vector2.down + Vector2.left, spriteRendererDown);
-        } else if (Input.GetKey(inputUp)) {
-            isWalking = true;
-            SetDirection(Vector2.up, spriteRendererUp);
-        } else if (Input.GetKey(inputDown)) {
-            isWalking = true;
-            SetDirection(Vector2.down, spriteRendererDown);
-        } else if (Input.GetKey(inputLeft)) {
-            isWalking = true;
-            SetDirection(Vector2.left, spriteRendererLeft);
-        } else if (Input.GetKey(inputRight)) {
-            isWalking = true;
-            SetDirection(Vector2.right, spriteRendererRight);
-        } else if (Input.GetKey(inputUp)) {
-            isWalking = true;
-            SetDirection(Vector2.right, spriteRendererRight);
-        } else {
-            isWalking = false;
-            SetDirection(Vector2.zero, activeSpriteRenderer);
+    void Update()
+    {
+        v1 = rnd.Next(3);
+        v2 = rnd.Next(3);
+        if(Time.time > nextActionTime){
+            nextActionTime += period;
+            if (directions[v1] == Vector2.up || directions[v2] == Vector2.up){
+                SetDirection(directions[v1] + directions[v2], spriteRendererUp);
+            } else if (directions[v1] == Vector2.down || directions[v2] == Vector2.down){
+                SetDirection(directions[v1] + directions[v2], spriteRendererDown);
+            } else if (directions[v1] == Vector2.left && directions[v2] == Vector2.left){
+                SetDirection(directions[v1] + directions[v2], spriteRendererLeft);
+            } else {
+                SetDirection(directions[v1] + directions[v2], spriteRendererRight);
+            }
         }
     }
 
@@ -95,6 +81,18 @@ public class MovementController : MonoBehaviour
                 DeathSequence();
             }
         }
+        if( target.gameObject.tag.Equals("TileMap") == true ){
+            direction = direction * -1;
+            if (direction.y > 0){
+                SetDirection(direction, spriteRendererUp);
+            } else if (direction.y < 0){
+                SetDirection(direction, spriteRendererDown);
+            } else if (direction.x < 0){
+                SetDirection(direction, spriteRendererLeft);
+            } else {
+                SetDirection(direction, spriteRendererRight);
+            }
+        }
     }
 
     private void DeathSequence()
@@ -114,5 +112,4 @@ public class MovementController : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
-
 }

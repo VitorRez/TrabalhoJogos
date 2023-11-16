@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 101208157}
   m_Layer: 0
   m_Name: UpperTilemap
-  m_TagString: Untagged
+  m_TagString: TileMap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1125,30 +1125,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8186000825129444065, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
   m_PrefabInstance: {fileID: 5961179902822223509}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1464615967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1464615963}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 550279a9b2426334bb0aff677ae9a1ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HP: 10
-  speed: 5
-  isWalking: 0
-  inputUp: 273
-  inputDown: 274
-  inputLeft: 276
-  inputRight: 275
-  spriteRendererUp: {fileID: 1802424826}
-  spriteRendererDown: {fileID: 1589062315}
-  spriteRendererLeft: {fileID: 1454736198}
-  spriteRendererRight: {fileID: 758947510}
-  spriteRendererDeath: {fileID: 786435777}
 --- !u!114 &1464615968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1163,6 +1139,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 10
   spriteRendererDeath: {fileID: 0}
+--- !u!114 &1464615969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464615963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a219b197fc3853439bd07b0a2a191a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 10
+  period: 2
+  speed: 2
+  isWalking: 0
+  spriteRendererUp: {fileID: 1802424826}
+  spriteRendererDown: {fileID: 1589062315}
+  spriteRendererLeft: {fileID: 1454736198}
+  spriteRendererRight: {fileID: 758947510}
+  spriteRendererDeath: {fileID: 786435777}
 --- !u!1 &1585239077
 GameObject:
   m_ObjectHideFlags: 0
@@ -1306,7 +1303,7 @@ GameObject:
   - component: {fileID: 2022511931}
   m_Layer: 0
   m_Name: Tilemap
-  m_TagString: Untagged
+  m_TagString: TileMap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25839,10 +25836,10 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1175181282620787156, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1464615967}
+      addedObject: {fileID: 1464615968}
     - targetCorrespondingSourceObject: {fileID: 1175181282620787156, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1464615968}
+      addedObject: {fileID: 1464615969}
   m_SourcePrefab: {fileID: 100100000, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
 --- !u!1001 &6925745750841219748
 PrefabInstance:
