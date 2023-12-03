@@ -12,7 +12,6 @@ public class EnemyMovement : MonoBehaviour
     private Vector2[] directions = {Vector2.up, Vector2.down, Vector2.left, Vector2.right};
     private System.Random rnd = new System.Random();
     private int v1 = 3;
-    private int v2 = 3;
     private float nextActionTime = 0.0f;
     public float period = 1.0f;
     public float speed = 5f;
@@ -36,17 +35,16 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
         v1 = rnd.Next(3);
-        v2 = rnd.Next(3);
         if(Time.time > nextActionTime){
             nextActionTime += period;
-            if (directions[v1] == Vector2.up || directions[v2] == Vector2.up){
-                SetDirection(directions[v1] + directions[v2], spriteRendererUp);
-            } else if (directions[v1] == Vector2.down || directions[v2] == Vector2.down){
-                SetDirection(directions[v1] + directions[v2], spriteRendererDown);
-            } else if (directions[v1] == Vector2.left && directions[v2] == Vector2.left){
-                SetDirection(directions[v1] + directions[v2], spriteRendererLeft);
+            if (directions[v1] == Vector2.up){
+                SetDirection(directions[v1], spriteRendererUp);
+            } else if (directions[v1] == Vector2.down){
+                SetDirection(directions[v1], spriteRendererDown);
+            } else if (directions[v1] == Vector2.left){
+                SetDirection(directions[v1], spriteRendererLeft);
             } else {
-                SetDirection(directions[v1] + directions[v2], spriteRendererRight);
+                SetDirection(directions[v1], spriteRendererRight);
             }
         }
     }
@@ -83,11 +81,11 @@ public class EnemyMovement : MonoBehaviour
         }
         if( target.gameObject.tag.Equals("TileMap") == true ){
             direction = direction * -1;
-            if (direction.y > 0){
+            if (direction == Vector2.up){
                 SetDirection(direction, spriteRendererUp);
-            } else if (direction.y < 0){
+            } else if (direction == Vector2.down){
                 SetDirection(direction, spriteRendererDown);
-            } else if (direction.x < 0){
+            } else if (direction == Vector2.left){
                 SetDirection(direction, spriteRendererLeft);
             } else {
                 SetDirection(direction, spriteRendererRight);
