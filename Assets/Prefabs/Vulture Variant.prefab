@@ -1,0 +1,191 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1147973644780775467
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 172688777029005033, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1201853497, guid: c6a2f6566fd2cfa4a8b00c1499c0d198, type: 3}
+    - target: {fileID: 1175181282620787156, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: m_Name
+      value: Vulture Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216640413876984691, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: m_Name
+      value: VultureUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401910564688147492, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: idleSprite
+      value: 
+      objectReference: {fileID: 1201853497, guid: c6a2f6566fd2cfa4a8b00c1499c0d198, type: 3}
+    - target: {fileID: 1401910564688147492, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: animationTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401910564688147492, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: animationSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: -382970391, guid: c6a2f6566fd2cfa4a8b00c1499c0d198, type: 3}
+    - target: {fileID: 1401910564688147492, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: animationSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: -1047952410, guid: c6a2f6566fd2cfa4a8b00c1499c0d198, type: 3}
+    - target: {fileID: 2246653224504171508, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: idleSprite
+      value: 
+      objectReference: {fileID: -1277815493, guid: c6a2f6566fd2cfa4a8b00c1499c0d198, type: 3}
+    - target: {fileID: 2246653224504171508, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: animationSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 2011570846, guid: c6a2f6566fd2cfa4a8b00c1499c0d198, type: 3}
+    - target: {fileID: 2246653224504171508, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: animationSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: -862799971, guid: c6a2f6566fd2cfa4a8b00c1499c0d198, type: 3}
+    - target: {fileID: 3281447329880301985, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: m_Name
+      value: VultureLeft
+      objectReference: {fileID: 0}
+    - target: {fileID: 3700788256122948449, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: m_Name
+      value: VultureRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 4201667685468505099, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4368952373972310453, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1277815493, guid: c6a2f6566fd2cfa4a8b00c1499c0d198, type: 3}
+    - target: {fileID: 5396085638613790427, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396085638613790427, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5578967339561207576, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: idleSprite
+      value: 
+      objectReference: {fileID: 1138183216, guid: c6a2f6566fd2cfa4a8b00c1499c0d198, type: 3}
+    - target: {fileID: 5578967339561207576, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: animationTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5578967339561207576, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: animationSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 1482958616, guid: c6a2f6566fd2cfa4a8b00c1499c0d198, type: 3}
+    - target: {fileID: 5578967339561207576, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: animationSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: -257637658, guid: c6a2f6566fd2cfa4a8b00c1499c0d198, type: 3}
+    - target: {fileID: 5590127641107516346, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1201853497, guid: c6a2f6566fd2cfa4a8b00c1499c0d198, type: 3}
+    - target: {fileID: 6779730671396803427, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: m_Name
+      value: VultureDeath
+      objectReference: {fileID: 0}
+    - target: {fileID: 6924121788947359799, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: m_Name
+      value: VultureDown
+      objectReference: {fileID: 0}
+    - target: {fileID: 7180593048141118465, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: speed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7573778236962882665, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1201853497, guid: c6a2f6566fd2cfa4a8b00c1499c0d198, type: 3}
+    - target: {fileID: 7964825573452905649, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1138183216, guid: c6a2f6566fd2cfa4a8b00c1499c0d198, type: 3}
+    - target: {fileID: 8044756137588149505, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: idleSprite
+      value: 
+      objectReference: {fileID: 1201853497, guid: c6a2f6566fd2cfa4a8b00c1499c0d198, type: 3}
+    - target: {fileID: 8044756137588149505, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: animationTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8044756137588149505, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: animationSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: -382970391, guid: c6a2f6566fd2cfa4a8b00c1499c0d198, type: 3}
+    - target: {fileID: 8044756137588149505, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: animationSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: -1047952410, guid: c6a2f6566fd2cfa4a8b00c1499c0d198, type: 3}
+    - target: {fileID: 8186000825129444065, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186000825129444065, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.11528331
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186000825129444065, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186000825129444065, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186000825129444065, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186000825129444065, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186000825129444065, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186000825129444065, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186000825129444065, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186000825129444065, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489266987409837179, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: idleSprite
+      value: 
+      objectReference: {fileID: 1201853497, guid: c6a2f6566fd2cfa4a8b00c1499c0d198, type: 3}
+    - target: {fileID: 8489266987409837179, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: animationTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489266987409837179, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: animationSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: -382970391, guid: c6a2f6566fd2cfa4a8b00c1499c0d198, type: 3}
+    - target: {fileID: 8489266987409837179, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}
+      propertyPath: animationSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: -1047952410, guid: c6a2f6566fd2cfa4a8b00c1499c0d198, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 922f287a362d6134ba61018a7014b7cb, type: 3}

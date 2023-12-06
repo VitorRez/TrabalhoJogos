@@ -5,9 +5,12 @@ public class MovementController : MonoBehaviour
 {   
     public int HP = 10;
     private new Rigidbody2D rigidbody;
+    private Collider2D collider;
     private Vector2 direction = Vector2.down;
     public float speed = 5f;
     public bool isWalking = false;
+    private float nextHit = 0.0f;
+    public float period = 1.0f;
 
     [Header("Input")]
     public KeyCode inputUp = KeyCode.W;
@@ -26,6 +29,7 @@ public class MovementController : MonoBehaviour
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
+        collider = GetComponent<Collider2D>();
         activeSpriteRenderer = spriteRendererRight;
         isWalking = false;
     }
@@ -87,7 +91,7 @@ public class MovementController : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D target){
-        if( target.gameObject.tag.Equals("Projectile") == true ){
+        if( target.gameObject.tag.Equals("Enemy") == true ){
             HP--;
             print("hit");
             if( HP <= 0 ){

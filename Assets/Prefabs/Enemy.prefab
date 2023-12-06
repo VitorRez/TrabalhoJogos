@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 5396085638613790427}
   - component: {fileID: 7134739363147827592}
   - component: {fileID: 4201667685468505099}
+  - component: {fileID: 7180593048141118465}
+  - component: {fileID: -6473100165046394037}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -29,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 1175181282620787156}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: -6.52, y: -0.11528331, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -128,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a219b197fc3853439bd07b0a2a191a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 10
+  HP: 4
   period: 2
   speed: 3
   isWalking: 0
@@ -137,6 +139,61 @@ MonoBehaviour:
   spriteRendererLeft: {fileID: 5578967339561207576}
   spriteRendererRight: {fileID: 8489266987409837179}
   spriteRendererDeath: {fileID: 2246653224504171508}
+--- !u!114 &7180593048141118465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175181282620787156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e957ad4a6ae5af144b0bff533862f0cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 4
+  player: {fileID: 0}
+  speed: 3
+  spriteRendererUp: {fileID: 8044756137588149505}
+  spriteRendererDown: {fileID: 1401910564688147492}
+  spriteRendererLeft: {fileID: 5578967339561207576}
+  spriteRendererRight: {fileID: 8489266987409837179}
+  spriteRendererDeath: {fileID: 2246653224504171508}
+--- !u!58 &-6473100165046394037
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175181282620787156}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.4}
+  serializedVersion: 2
+  m_Radius: 5
 --- !u!1 &1216640413876984691
 GameObject:
   m_ObjectHideFlags: 0
