@@ -4,13 +4,13 @@ using UnityEngine;
 public class MovementController : MonoBehaviour
 {   
     public int HP = 10;
+    private int width = 190;
+    public GameObject HPBar;
     private new Rigidbody2D rigidbody;
     private Collider2D collider;
     private Vector2 direction = Vector2.down;
     public float speed = 5f;
     public bool isWalking = false;
-    private float nextHit = 0.0f;
-    public float period = 1.0f;
 
     [Header("Input")]
     public KeyCode inputUp = KeyCode.W;
@@ -27,7 +27,7 @@ public class MovementController : MonoBehaviour
     private AnimatedSpriteRenderer activeSpriteRenderer;
 
     private void Awake()
-    {
+    {   
         rigidbody = GetComponent<Rigidbody2D>();
         collider = GetComponent<Collider2D>();
         activeSpriteRenderer = spriteRendererRight;
@@ -93,9 +93,11 @@ public class MovementController : MonoBehaviour
     void OnCollisionEnter2D(Collision2D target){
         if( target.gameObject.tag.Equals("Enemy") == true ){
             HP--;
-            print("hit");
+            width = width - 190/10;
+            HPBar.GetComponent<RectTransform>().sizeDelta = new Vector2(width, 10);
+            //print("hit");
             if( HP <= 0 ){
-                print("Dead");
+                //print("Dead");
                 DeathSequence();
             }
         }
@@ -115,8 +117,9 @@ public class MovementController : MonoBehaviour
     }
 
     private void OnDeathSequenceEnded()
-    {
+    {   
         gameObject.SetActive(false);
+        FindObjectOfType<GameManager>().CheckWinState();
     }
 
 }

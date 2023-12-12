@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4201667685468505099}
   - component: {fileID: 7180593048141118465}
   - component: {fileID: -6473100165046394037}
+  - component: {fileID: 3107518241574720867}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -31,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 1175181282620787156}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.52, y: -0.11528331, z: 0}
+  m_LocalPosition: {x: 0.05447483, y: 3.0057776, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -131,6 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 4
+  sound: 0
   period: 2
   speed: 3
   isWalking: 0
@@ -152,6 +154,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 4
+  sound: 0
+  P: {fileID: 0}
   player: {fileID: 0}
   speed: 3
   spriteRendererUp: {fileID: 8044756137588149505}
@@ -194,6 +198,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.4}
   serializedVersion: 2
   m_Radius: 5
+--- !u!114 &3107518241574720867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175181282620787156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9795ec083bd92c342933e6e01e42c7a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DeathSound: {fileID: 0}
+  enemy: {fileID: 1175181282620787156}
 --- !u!1 &1216640413876984691
 GameObject:
   m_ObjectHideFlags: 0

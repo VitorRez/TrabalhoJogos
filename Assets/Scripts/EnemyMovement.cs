@@ -7,6 +7,7 @@ public class EnemyMovement : MonoBehaviour
 {   
 
     public int HP = 10;
+    public bool sound = false;
     private new Rigidbody2D rigidbody;
     private Vector2 direction = Vector2.down;
     private Vector2[] directions = {Vector2.up, Vector2.down, Vector2.left, Vector2.right};
@@ -26,14 +27,18 @@ public class EnemyMovement : MonoBehaviour
     private AnimatedSpriteRenderer activeSpriteRenderer;
 
     private void Awake()
-    {
+    {   
         rigidbody = GetComponent<Rigidbody2D>();
         activeSpriteRenderer = spriteRendererRight;
         isWalking = false;
     }
 
     void Update()
-    {
+    {   
+        GameObject Player = GameObject.FindGameObjectWithTag("Player");
+        if(Player.activeInHierarchy == false){
+            gameObject.SetActive(false);
+        }
         v1 = rnd.Next(3);
         if(Time.time > nextActionTime){
             nextActionTime += period;
@@ -73,9 +78,10 @@ public class EnemyMovement : MonoBehaviour
     void OnCollisionEnter2D(Collision2D target){
         if( target.gameObject.tag.Equals("Projectile") == true ){
             HP--;
-            print("hit");
+            //print("hit");
             if( HP <= 0 ){
-                print("Dead");
+                //print("Dead");
+                sound = true;
                 DeathSequence();
             }
         }
@@ -94,7 +100,7 @@ public class EnemyMovement : MonoBehaviour
     }
 
     private void DeathSequence()
-    {
+    {   
         enabled = false;
 
         spriteRendererUp.enabled = false;

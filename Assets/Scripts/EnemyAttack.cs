@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {   
     public int HP = 10;
+    public bool sound = false;
     public GameObject P;
     public Transform player;
     public float speed;
@@ -21,7 +22,7 @@ public class EnemyAttack : MonoBehaviour
     private AnimatedSpriteRenderer activeSpriteRenderer;
 
     void Start()
-    {
+    {   
         rigidbody = this.GetComponent<Rigidbody2D>();  
     }
 
@@ -56,7 +57,8 @@ public class EnemyAttack : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col){
         if (col.gameObject.tag.Equals("Player") == true){
-            print("close");
+            //print("close");
+            this.GetComponent<EnemyMovement>().enabled = false;
             move = true;
         }
     }
@@ -64,9 +66,10 @@ public class EnemyAttack : MonoBehaviour
     void OnCollisionEnter2D(Collision2D target){
         if( target.gameObject.tag.Equals("Projectile") == true ){
             HP--;
-            print("hit");
+            //print("hit");
             if( HP <= 0 ){
-                print("Dead");
+                //print("Dead");
+                sound = true;
                 DeathSequence();
             }
         }
@@ -87,7 +90,8 @@ public class EnemyAttack : MonoBehaviour
     }
 
     private void DeathSequence()
-    {
+    {   
+
         enabled = false;
 
         spriteRendererUp.enabled = false;
