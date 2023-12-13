@@ -19,7 +19,7 @@ public class HPUI : MonoBehaviour
     void Update()
     {   
         PlayerHP = Player.GetComponent<MovementController>().HP;
-        print(PlayerHP);
+        //print(PlayerHP);
         this.GetComponent<RectTransform>().sizeDelta = new Vector2(width, 10);
     }
 }

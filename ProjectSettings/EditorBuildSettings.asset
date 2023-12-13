@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/dcomp.unity
     guid: 978df41e1ce3294418edcfca7d9a5625
+  - enabled: 1
+    path: Assets/Scenes/ArenaBoss.unity
+    guid: d11e614a4b01af1489806d631a2f23d0
+  - enabled: 1
+    path: Assets/Scenes/TelaFinal.unity
+    guid: fb132217c386afd419a8bd1b0dbcaff2
   m_configObjects: {}

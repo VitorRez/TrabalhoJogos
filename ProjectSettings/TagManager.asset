@@ -8,6 +8,7 @@ TagManager:
   - Projectile
   - TileMap
   - UI
+  - controle
   layers:
   - Default
   - TransparentFX
